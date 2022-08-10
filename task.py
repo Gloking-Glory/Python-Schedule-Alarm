@@ -1,4 +1,5 @@
 import datetime
+from playsound import playsound
 
 class TaskSchedule:
     def __init__(self) -> None:
@@ -25,6 +26,7 @@ class TaskSchedule:
             for taskDay, taskDetails in self.tasks.items():
                 if taskDay == currentDay and taskDetails['taskTime'] == currentTime:
                     print(taskDetails['taskTitle'] + ' is ringing now')
-                    
+                    playsound('9ice-Aye-Po-Gan.mp3')
+
 
 task = TaskSchedule()
